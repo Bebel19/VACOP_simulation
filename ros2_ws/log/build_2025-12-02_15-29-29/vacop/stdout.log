@@ -1,0 +1,29 @@
+running develop
+running egg_info
+creating vacop.egg-info
+writing vacop.egg-info/PKG-INFO
+writing dependency_links to vacop.egg-info/dependency_links.txt
+writing entry points to vacop.egg-info/entry_points.txt
+writing requirements to vacop.egg-info/requires.txt
+writing top-level names to vacop.egg-info/top_level.txt
+writing manifest file 'vacop.egg-info/SOURCES.txt'
+reading manifest file 'vacop.egg-info/SOURCES.txt'
+writing manifest file 'vacop.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages/vacop.egg-link (link to .)
+
+Installed /home/jeanbaptiste/ros2_ws/build/vacop
+running symlink_data
+creating /home/jeanbaptiste/ros2_ws/install/vacop/share/ament_index
+creating /home/jeanbaptiste/ros2_ws/install/vacop/share/ament_index/resource_index
+creating /home/jeanbaptiste/ros2_ws/install/vacop/share/ament_index/resource_index/packages
+symbolically linking /home/jeanbaptiste/ros2_ws/build/vacop/resource/vacop -> /home/jeanbaptiste/ros2_ws/install/vacop/share/ament_index/resource_index/packages
+symbolically linking /home/jeanbaptiste/ros2_ws/build/vacop/package.xml -> /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop
+creating /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/launch
+symbolically linking /home/jeanbaptiste/ros2_ws/build/vacop/launch/robot_launch.py -> /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/launch
+creating /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/resource
+symbolically linking /home/jeanbaptiste/ros2_ws/build/vacop/resource/my_robot.urdf -> /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/resource
+creating /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/config
+symbolically linking /home/jeanbaptiste/ros2_ws/build/vacop/config/controllers.yaml -> /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/config
+creating /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/worlds
+symbolically linking /home/jeanbaptiste/ros2_ws/build/vacop/worlds/village.wbt -> /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/worlds

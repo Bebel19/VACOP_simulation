@@ -1,0 +1,4 @@
+[console_scripts]
+camera_view = vacop.camera_display:main
+teleop = vacop.teleop_vacop:main
+

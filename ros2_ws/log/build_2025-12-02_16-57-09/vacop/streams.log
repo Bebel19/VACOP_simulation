@@ -1,0 +1,19 @@
+[0.330s] Invoking command in '/home/jeanbaptiste/ros2_ws/build/vacop': PYTHONPATH=/home/jeanbaptiste/ros2_ws/build/vacop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jeanbaptiste/ros2_ws/build/vacop/build --no-deps symlink_data
+[0.471s] running develop
+[0.548s] running egg_info
+[0.548s] writing vacop.egg-info/PKG-INFO
+[0.548s] writing dependency_links to vacop.egg-info/dependency_links.txt
+[0.548s] writing entry points to vacop.egg-info/entry_points.txt
+[0.548s] writing requirements to vacop.egg-info/requires.txt
+[0.548s] writing top-level names to vacop.egg-info/top_level.txt
+[0.549s] reading manifest file 'vacop.egg-info/SOURCES.txt'
+[0.550s] writing manifest file 'vacop.egg-info/SOURCES.txt'
+[0.551s] running build_ext
+[0.551s] Creating /home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages/vacop.egg-link (link to .)
+[0.551s] Installing camera_view script to /home/jeanbaptiste/ros2_ws/install/vacop/lib/vacop
+[0.551s] Installing teleop script to /home/jeanbaptiste/ros2_ws/install/vacop/lib/vacop
+[0.551s] 
+[0.551s] Installed /home/jeanbaptiste/ros2_ws/build/vacop
+[0.551s] running symlink_data
+[0.551s] symbolically linking /home/jeanbaptiste/ros2_ws/build/vacop/worlds/vacop_body.obj -> /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/worlds
+[0.567s] Invoked command in '/home/jeanbaptiste/ros2_ws/build/vacop' returned '0': PYTHONPATH=/home/jeanbaptiste/ros2_ws/build/vacop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jeanbaptiste/ros2_ws/build/vacop/build --no-deps symlink_data

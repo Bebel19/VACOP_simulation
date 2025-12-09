@@ -1,0 +1,28 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 40
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    propulsion_controller:
+      type: forward_command_controller/ForwardCommandController
+
+    steering_controller:
+      type: forward_command_controller/ForwardCommandController
+
+propulsion_controller:
+  ros__parameters:
+    joints:
+      - moteur_ad
+      - moteur_ag
+      - moteur_avant_gauche
+      - moteur_avant_droite
+    interface_name: velocity
+
+steering_controller:
+  ros__parameters:
+    joints:
+      - direction_gauche
+      - direction_droite
+    interface_name: position

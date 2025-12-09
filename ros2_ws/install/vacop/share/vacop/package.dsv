@@ -1,0 +1,9 @@
+source;share/vacop/hook/pythonpath.ps1
+source;share/vacop/hook/pythonpath.dsv
+source;share/vacop/hook/pythonpath.sh
+source;share/vacop/hook/ament_prefix_path.ps1
+source;share/vacop/hook/ament_prefix_path.dsv
+source;share/vacop/hook/ament_prefix_path.sh
+source;../../build/vacop/share/vacop/hook/pythonpath_develop.ps1
+source;../../build/vacop/share/vacop/hook/pythonpath_develop.dsv
+source;../../build/vacop/share/vacop/hook/pythonpath_develop.sh

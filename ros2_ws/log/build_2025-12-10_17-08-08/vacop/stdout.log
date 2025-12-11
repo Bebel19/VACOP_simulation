@@ -1,0 +1,22 @@
+running egg_info
+writing ../../build/vacop/vacop.egg-info/PKG-INFO
+writing dependency_links to ../../build/vacop/vacop.egg-info/dependency_links.txt
+writing entry points to ../../build/vacop/vacop.egg-info/entry_points.txt
+writing requirements to ../../build/vacop/vacop.egg-info/requires.txt
+writing top-level names to ../../build/vacop/vacop.egg-info/top_level.txt
+reading manifest file '../../build/vacop/vacop.egg-info/SOURCES.txt'
+writing manifest file '../../build/vacop/vacop.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying launch/rtabmap_slam_launch.py -> /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/launch
+copying worlds/village.wbt -> /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/worlds
+running install_egg_info
+removing '/home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages/vacop-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/vacop/vacop.egg-info to /home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages/vacop-0.0.0-py3.10.egg-info
+running install_scripts
+Installing camera_view script to /home/jeanbaptiste/ros2_ws/install/vacop/lib/vacop
+Installing teleop script to /home/jeanbaptiste/ros2_ws/install/vacop/lib/vacop
+writing list of installed files to '/home/jeanbaptiste/ros2_ws/build/vacop/install.log'

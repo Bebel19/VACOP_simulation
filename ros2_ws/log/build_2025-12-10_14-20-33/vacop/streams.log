@@ -1,0 +1,18 @@
+[0.843s] Invoking command in '/home/jeanbaptiste/ros2_ws/build/vacop': PYTHONPATH=/home/jeanbaptiste/ros2_ws/build/vacop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jeanbaptiste/ros2_ws/build/vacop/build --no-deps symlink_data
+[0.994s] running develop
+[1.082s] running egg_info
+[1.082s] writing vacop.egg-info/PKG-INFO
+[1.082s] writing dependency_links to vacop.egg-info/dependency_links.txt
+[1.082s] writing entry points to vacop.egg-info/entry_points.txt
+[1.082s] writing requirements to vacop.egg-info/requires.txt
+[1.082s] writing top-level names to vacop.egg-info/top_level.txt
+[1.083s] reading manifest file 'vacop.egg-info/SOURCES.txt'
+[1.084s] writing manifest file 'vacop.egg-info/SOURCES.txt'
+[1.085s] running build_ext
+[1.085s] Creating /home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages/vacop.egg-link (link to .)
+[1.085s] Installing camera_view script to /home/jeanbaptiste/ros2_ws/install/vacop/lib/vacop
+[1.085s] Installing teleop script to /home/jeanbaptiste/ros2_ws/install/vacop/lib/vacop
+[1.085s] 
+[1.086s] Installed /home/jeanbaptiste/ros2_ws/build/vacop
+[1.086s] running symlink_data
+[1.103s] Invoked command in '/home/jeanbaptiste/ros2_ws/build/vacop' returned '0': PYTHONPATH=/home/jeanbaptiste/ros2_ws/build/vacop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jeanbaptiste/ros2_ws/build/vacop/build --no-deps symlink_data

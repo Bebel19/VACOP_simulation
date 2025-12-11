@@ -1,0 +1,23 @@
+[0.365s] Invoking command in '/home/jeanbaptiste/ros2_ws/src/vacop': PYTHONPATH=/home/jeanbaptiste/ros2_ws/build/vacop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vacop build --build-base /home/jeanbaptiste/ros2_ws/build/vacop/build install --record /home/jeanbaptiste/ros2_ws/build/vacop/install.log --single-version-externally-managed install_data
+[0.501s] running egg_info
+[0.502s] writing ../../build/vacop/vacop.egg-info/PKG-INFO
+[0.502s] writing dependency_links to ../../build/vacop/vacop.egg-info/dependency_links.txt
+[0.502s] writing entry points to ../../build/vacop/vacop.egg-info/entry_points.txt
+[0.502s] writing requirements to ../../build/vacop/vacop.egg-info/requires.txt
+[0.502s] writing top-level names to ../../build/vacop/vacop.egg-info/top_level.txt
+[0.503s] reading manifest file '../../build/vacop/vacop.egg-info/SOURCES.txt'
+[0.504s] writing manifest file '../../build/vacop/vacop.egg-info/SOURCES.txt'
+[0.504s] running build
+[0.504s] running build_py
+[0.504s] running install
+[0.504s] running install_lib
+[0.505s] running install_data
+[0.505s] copying launch/rtabmap_slam_launch.py -> /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/launch
+[0.505s] running install_egg_info
+[0.506s] removing '/home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages/vacop-0.0.0-py3.10.egg-info' (and everything under it)
+[0.506s] Copying ../../build/vacop/vacop.egg-info to /home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages/vacop-0.0.0-py3.10.egg-info
+[0.507s] running install_scripts
+[0.520s] Installing camera_view script to /home/jeanbaptiste/ros2_ws/install/vacop/lib/vacop
+[0.520s] Installing teleop script to /home/jeanbaptiste/ros2_ws/install/vacop/lib/vacop
+[0.520s] writing list of installed files to '/home/jeanbaptiste/ros2_ws/build/vacop/install.log'
+[0.534s] Invoked command in '/home/jeanbaptiste/ros2_ws/src/vacop' returned '0': PYTHONPATH=/home/jeanbaptiste/ros2_ws/build/vacop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vacop build --build-base /home/jeanbaptiste/ros2_ws/build/vacop/build install --record /home/jeanbaptiste/ros2_ws/build/vacop/install.log --single-version-externally-managed install_data

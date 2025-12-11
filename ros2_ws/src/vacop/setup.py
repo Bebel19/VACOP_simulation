@@ -10,9 +10,10 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/launch', ['launch/robot_launch.py']),
+        ('share/' + package_name + '/launch', ['launch/robot_launch.py', 'launch/rtabmap_slam_launch.py']),
         ('share/' + package_name + '/resource', ['resource/my_robot.urdf']),
         ('share/' + package_name + '/config', ['config/controllers.yaml']),
+        # REMPLACE 'ton_monde.wbt' PAR LE NOM EXACT DE TON FICHIER :
         ('share/' + package_name + '/worlds', [
             'worlds/village.wbt',
             'worlds/vacop_body.obj'

@@ -1,0 +1,42 @@
+running develop
+Removing /home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages/vacop.egg-link (link to .)
+running egg_info
+writing ../../build/vacop/vacop.egg-info/PKG-INFO
+writing dependency_links to ../../build/vacop/vacop.egg-info/dependency_links.txt
+writing entry points to ../../build/vacop/vacop.egg-info/entry_points.txt
+writing requirements to ../../build/vacop/vacop.egg-info/requires.txt
+writing top-level names to ../../build/vacop/vacop.egg-info/top_level.txt
+reading manifest file '../../build/vacop/vacop.egg-info/SOURCES.txt'
+writing manifest file '../../build/vacop/vacop.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/jeanbaptiste/ros2_ws/build/vacop/build
+creating /home/jeanbaptiste/ros2_ws/build/vacop/build/lib
+creating /home/jeanbaptiste/ros2_ws/build/vacop/build/lib/vacop
+copying vacop/teleop_vacop.py -> /home/jeanbaptiste/ros2_ws/build/vacop/build/lib/vacop
+copying vacop/camera_display.py -> /home/jeanbaptiste/ros2_ws/build/vacop/build/lib/vacop
+copying vacop/__init__.py -> /home/jeanbaptiste/ros2_ws/build/vacop/build/lib/vacop
+running install
+running install_lib
+creating /home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages/vacop
+copying /home/jeanbaptiste/ros2_ws/build/vacop/build/lib/vacop/teleop_vacop.py -> /home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages/vacop
+copying /home/jeanbaptiste/ros2_ws/build/vacop/build/lib/vacop/camera_display.py -> /home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages/vacop
+copying /home/jeanbaptiste/ros2_ws/build/vacop/build/lib/vacop/__init__.py -> /home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages/vacop
+byte-compiling /home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages/vacop/teleop_vacop.py to teleop_vacop.cpython-310.pyc
+byte-compiling /home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages/vacop/camera_display.py to camera_display.cpython-310.pyc
+byte-compiling /home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages/vacop/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying resource/vacop -> /home/jeanbaptiste/ros2_ws/install/vacop/share/ament_index/resource_index/packages
+copying package.xml -> /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop
+copying launch/robot_launch.py -> /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/launch
+copying launch/rtabmap_slam_launch.py -> /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/launch
+copying resource/my_robot.urdf -> /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/resource
+copying config/controllers.yaml -> /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/config
+copying worlds/village.wbt -> /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/worlds
+copying worlds/vacop_body.obj -> /home/jeanbaptiste/ros2_ws/install/vacop/share/vacop/worlds
+running install_egg_info
+Copying ../../build/vacop/vacop.egg-info to /home/jeanbaptiste/ros2_ws/install/vacop/lib/python3.10/site-packages/vacop-0.0.0-py3.10.egg-info
+running install_scripts
+Installing camera_view script to /home/jeanbaptiste/ros2_ws/install/vacop/lib/vacop
+Installing teleop script to /home/jeanbaptiste/ros2_ws/install/vacop/lib/vacop
+writing list of installed files to '/home/jeanbaptiste/ros2_ws/build/vacop/install.log'

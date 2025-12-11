@@ -1,0 +1,121 @@
+Manuel d'Utilisation : Environnement de Simulation Robot VACOP
+
+
+1. Présentation
+
+Ce document décrit comment installer et utiliser l'environnement de simulation du robot VACOP sous Webots et ROS 2 Humble. Cet environnement fournit un jumeau numérique du robot, incluant la simulation physique, le contrôle des moteurs et l'accès aux capteurs (Caméra et LiDAR).
+2. Prérequis
+
+    Système : Ubuntu 22.04 LTS
+
+    Middleware : ROS 2 Humble
+
+    Simulateur : Webots R2025a (ou version plus récente)
+
+3. Installation
+
+    Copiez le dossier du projet ros2_ws sur votre machine.
+
+    Ouvrez un terminal à la racine du dossier ros2_ws.
+
+    Installez les dépendances système et Python :
+    Bash
+
+sudo apt update
+sudo apt install -y ros-humble-ros2-control \
+                    ros-humble-ros2-controllers \
+                    ros-humble-webots-ros2-control \
+                    ros-humble-cv-bridge \
+                    ros-humble-rqt-image-viewpip install pynput "numpy<2" "opencv-python<4.11"
+
+pip install -r requirements.txt                 
+
+Compilez le workspace :
+Bash
+
+    colcon build --symlink-install
+    source install/setup.bash
+
+4. Lancement de la Simulation
+
+Pour démarrer le robot, Webots et les contrôleurs ROS, exécutez la commande suivante :
+Bash
+
+ros2 launch vacop robot_launch.py
+
+Le robot devrait apparaître dans un environnement "Village".
+
+5. Contrôle Manuel (Téléopération)
+
+Pour déplacer le robot manuellement afin de tester vos algorithmes, ouvrez un nouveau terminal et lancez :
+Bash
+
+source install/setup.bash
+ros2 run vacop teleop
+
+Contrôles (Clavier) :
+
+    Z : Avancer
+
+    S : Reculer
+
+    Q / D : Tourner à Gauche / Droite
+
+    Espace : Freinage d'urgence
+
+6. Informations pour le Groupe 1 : Classification (Caméra)
+
+Le robot est équipé d'une caméra frontale simulant le flux vidéo réel.
+
+    Topic ROS 2 : /camera/image_raw/image_color
+
+    Type de message : sensor_msgs/msg/Image
+
+    Résolution : 1920x1200 (Full HD)
+
+    Fréquence : ~30-40 Hz
+
+Comment visualiser le flux ?
+
+Vous pouvez utiliser le script de visualisation intégré :
+Bash
+
+ros2 run vacop camera_view
+
+ATTENTION : C'est normal si l'image semble se freeze a certains instants. L'image a une résolution de 1920 x 1200, soit plus de 2.3 millions de pixels. Webots tente d'envoyer cela plus de 30 fois à la seconde, soit plus de 150Mo/s, ce qui crée ces micro-freeze le temps que le buffer se vide.
+
+7. Informations pour le Groupe 2 : SLAM (LiDAR)
+
+Le robot est équipé d'un LiDAR 3D configuré pour le SLAM et la navigation.
+
+    Topic ROS 2 : /scan/point_cloud
+
+    Type de message : sensor_msgs/msg/PointCloud2
+
+    Frame ID : lidar (La transformation TF est publiée automatiquement sur /tf)
+
+    Portée : 0.2m à 150m
+
+Comment visualiser les données ?
+
+Lancez RViz2 pour voir les impacts laser et le référentiel du robot :
+Bash
+
+rviz2
+
+    Dans la colonne de gauche ("Displays"), changez Fixed Frame en lidar
+
+Cliquez sur le bouton Add (en bas à gauche).
+
+Dans la liste, sélectionnez PointCloud2
+
+Dans les propriétés du nouveau module PointCloud2, cherchez le champ Topic et sélectionnez /scan/point_cloud.
+
+
+8. Dépannage fréquent
+
+    Erreur ModuleNotFoundError: No module named 'webots_ros2_control' : Vous avez oublié d'installer les paquets système. Relancez : sudo apt install ros-humble-webots-ros2-control.
+
+    Erreur AttributeError: _ARRAY_API not found (Problème Numpy) : Votre version de Numpy est trop récente pour ROS Humble. Forcez la version compatible : pip install "numpy<2".
+
+    Si vous trouvez d'autres erreurs envoyez moi un message discord, j'essaierai d'y répondre.

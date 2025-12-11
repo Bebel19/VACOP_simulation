@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<robot name="vacop" xmlns:xacro="http://ros.org/wiki/xacro">
+  <link name="base_link">
+    <visual>
+      <origin xyz="-0.07 0.1 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.8 0.4 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.07 0.1 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.8 0.4 0.5"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.07 1 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.7 0.1 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.07 1 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.7 0.1 0.5"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.07 -0.9 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.7 0.1 0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.07 -0.9 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.7 0.1 0.5"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.06 0 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.3 1.8 0.6"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.06 0 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.3 1.8 0.6"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="moteur_ag" type="continuous">
+    <parent link="base_link"/>
+    <child link="Roues_ag"/>
+    <axis xyz="-0.000009 -1 -0.000008"/>
+    <limit effort="50" velocity="100"/>
+    <origin xyz="0.27 0.58 -0.2" rpy="3.141585 -0.023084 -1.570806"/>
+  </joint>
+  <link name="Roues_ag">
+  </link>
+  <link name="vehicle wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0"/>
+      <geometry>
+        <cylinder radius="0.188" length="0.1"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.570796 0 0"/>
+      <geometry>
+        <cylinder radius="0.188" length="0.1"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Roues_ag_vehicle wheel_joint" type="fixed">
+    <parent link="Roues_ag"/>
+    <child link="vehicle wheel"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+  <joint name="moteur_ad" type="continuous">
+    <parent link="base_link"/>
+    <child link="Roues_ad"/>
+    <axis xyz="-0.000004 1 0.000001"/>
+    <limit effort="50" velocity="100"/>
+    <origin xyz="-0.4 0.58 -0.2" rpy="3.14159 -0.245431 1.5708"/>
+  </joint>
+  <link name="Roues_ad">
+  </link>
+  <link name="vehicle wheel_0">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0"/>
+      <geometry>
+        <cylinder radius="0.188" length="0.1"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.570796 0 0"/>
+      <geometry>
+        <cylinder radius="0.188" length="0.1"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Roues_ad_vehicle wheel_0_joint" type="fixed">
+    <parent link="Roues_ad"/>
+    <child link="vehicle wheel_0"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+  <joint name="direction_droite" type="revolute">
+    <parent link="base_link"/>
+    <child link="porte_fusee_droite"/>
+    <axis xyz="-0.000013 0 1"/>
+    <limit effort="100" lower="-2" upper="2" velocity="10"/>
+    <origin xyz="-0.43 -0.37 -0.2" rpy="0 0.000013 -0.000007"/>
+  </joint>
+  <link name="porte_fusee_droite">
+  </link>
+  <joint name="moteur_avant_droite" type="continuous">
+    <parent link="porte_fusee_droite"/>
+    <child link="Roues_avant_droite"/>
+    <axis xyz="-0.000003 1 0"/>
+    <limit effort="50" velocity="100"/>
+    <origin xyz="0 0 0" rpy="3.141587 -1.038502 1.570803"/>
+  </joint>
+  <link name="Roues_avant_droite">
+  </link>
+  <link name="vehicle wheel_1">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0"/>
+      <geometry>
+        <cylinder radius="0.188" length="0.1"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.570796 0 0"/>
+      <geometry>
+        <cylinder radius="0.188" length="0.1"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Roues_avant_droite_vehicle wheel_1_joint" type="fixed">
+    <parent link="Roues_avant_droite"/>
+    <child link="vehicle wheel_1"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+  <joint name="direction_gauche" type="revolute">
+    <parent link="base_link"/>
+    <child link="porte_fusee_gauche"/>
+    <axis xyz="0.000002 0 1"/>
+    <limit effort="100" lower="-2" upper="2" velocity="10"/>
+    <origin xyz="0.31 -0.37 -0.2" rpy="0 -0.000002 -3.141592"/>
+  </joint>
+  <link name="porte_fusee_gauche">
+  </link>
+  <joint name="moteur_avant_gauche" type="continuous">
+    <parent link="porte_fusee_gauche"/>
+    <child link="Roues_avant_droite_2"/>
+    <axis xyz="-0.000003 1 0"/>
+    <limit effort="50" velocity="100"/>
+    <origin xyz="0 0 0" rpy="0.000002 -0.42686 -1.5708"/>
+  </joint>
+  <link name="Roues_avant_droite_2">
+  </link>
+  <link name="vehicle wheel_3">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.570796 0 0"/>
+      <geometry>
+        <cylinder radius="0.188" length="0.1"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.570796 0 0"/>
+      <geometry>
+        <cylinder radius="0.188" length="0.1"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Roues_avant_droite_2_vehicle wheel_3_joint" type="fixed">
+    <parent link="Roues_avant_droite_2"/>
+    <child link="vehicle wheel_3"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+  <link name="camera">
+  </link>
+  <joint name="base_link_camera_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera"/>
+    <origin xyz="-0.06 -0.23 0.31" rpy="-1.570796 0 -3.141596"/>
+  </joint>
+  <link name="lidar">
+  </link>
+  <joint name="base_link_lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar"/>
+    <origin xyz="-0.06 0.1 0.42" rpy="0 0 -1.5708"/>
+  </joint>
+  
+  <webots>
+    <plugin type="webots_ros2_control::Ros2Control" />
+
+    <device reference="camera" type="Camera">
+      <ros>
+        <topicName>/camera/image_raw</topicName>
+        <alwaysOn>true</alwaysOn>
+      </ros>
+    </device>
+
+    <device reference="lidar" type="Lidar">
+      <ros>
+        <topicName>/scan</topicName>
+        <enabled>true</enabled>
+        <alwaysOn>true</alwaysOn>
+      </ros>
+    </device>
+  </webots>
+  
+  <ros2_control name="WebotsControl" type="system">
+        <hardware>
+            <plugin>webots_ros2_control::Ros2ControlSystem</plugin>
+        </hardware>
+
+        <joint name="moteur_ad">
+            <command_interface name="velocity"/>
+            <state_interface name="velocity"/>
+            <state_interface name="position"/>
+        </joint>
+        <joint name="moteur_ag">
+            <command_interface name="velocity"/>
+            <state_interface name="velocity"/>
+            <state_interface name="position"/>
+        </joint>
+        <joint name="moteur_avant_gauche">
+            <command_interface name="velocity"/>
+            <state_interface name="velocity"/>
+            <state_interface name="position"/>
+        </joint>
+        <joint name="moteur_avant_droite">
+            <command_interface name="velocity"/>
+            <state_interface name="velocity"/>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="direction_gauche">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+        </joint>
+        <joint name="direction_droite">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+        </joint>
+    </ros2_control>
+</robot>

@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  vacop:
+    build: .
+    image: vacop_simulation
+    container_name: vacop_sim
+    # Mode host requis pour ROS 2 (FastDDS / Shared Memory)
+    network_mode: host
+    ipc: host
+    privileged: true
+    environment:
+      # Projection de l'affichage sur l'écran de l'hôte
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - NVIDIA_DRIVER_CAPABILITIES=all
+    volumes:
+      # Socket X11 pour l'interface graphique
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      # Montage du code source en "live" pour développer sans rebuilder l'image
+      - ./src:/root/ros2_ws/src
+    # Commande par défaut : lance la simulation
+    command: ros2 launch vacop robot_launch.py
